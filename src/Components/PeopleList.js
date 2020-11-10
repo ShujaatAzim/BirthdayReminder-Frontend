@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PeopleList = ({ people }) => {
+const PeopleList = ({ people, removePerson }) => {
 
   return (
     <div>
@@ -13,6 +13,8 @@ const PeopleList = ({ people }) => {
               <h5>{name}</h5>
               <p>
                 {age} years old
+                <br />
+                <button id="person-button" onClick={() => removePerson(person)}>Wished!</button>
               </p>
             </div>
           </article>
